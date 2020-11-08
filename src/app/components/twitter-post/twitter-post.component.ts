@@ -31,6 +31,6 @@ export class TwitterPostComponent {
 
     return `https://twitter.com/intent/tweet?hashtags=${encodeURIComponent(
       hashTags
-    )}&related=Eventyret&url=${route}&text=`;
+    )}&related=Eventyret&url=${route}`;
   }
 }
