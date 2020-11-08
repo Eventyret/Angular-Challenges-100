@@ -1,5 +1,8 @@
 <h1 class="title">Components</h1>
 <div class="hr"></div>
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Twitter Post'" [subtitle]="'Components'">
+<app-twitter-post body></app-twitter-post>
+</app-card>
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Input'" [subtitle]="'Components'">
   <div body>
     <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadOnly]="false"></app-credit-card-input>
