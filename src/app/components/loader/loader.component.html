@@ -1,8 +1,9 @@
 <div class="loader-overlay" [style.display]="isLoading ? 'block' : 'none'">
   <div class="loader-container">
     <div class="loader">
-      <div class="circular">
-      </div>
+      <ng-container [ngSwitch]="loaderType">
+        <div class="circular" *ngSwitchCase="LoaderType.Circular"></div>
+      </ng-container>
     </div>
   </div>
 </div>
