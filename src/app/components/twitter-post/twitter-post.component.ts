@@ -9,16 +9,28 @@ import { Title } from '@angular/platform-browser';
 export class TwitterPostComponent {
   @Input() public baseHref = 'https://dehlin.dev';
   @Input() public hashTags: string[] = [
-    'Simen Daehlin',
+    'Eventyret',
     'Javascript',
     'TypeScript',
     'Angular',
-    '100 Angular Challanges',
+    '100AngularChallenges',
   ];
 
   constructor(public titleService: Title) {}
 
   public get twitterUrl(): string {
-    return '';
+    const base = this.getBaseWithHashTagsAndRoute();
+    const message = encodeURIComponent(
+      `Check out ${this.titleService.getTitle()} and become an Angular GOD!`
+    );
+    return `${base} ${message}`;
+  }
+  private getBaseWithHashTagsAndRoute(): string {
+    const route = encodeURI(this.baseHref);
+    const hashTags = this.hashTags.join(',');
+
+    return `https://twitter.com/intent/tweet?hashtags=${encodeURIComponent(
+      hashTags
+    )}&related=Eventyret&url=${route}&text=`;
   }
 }
