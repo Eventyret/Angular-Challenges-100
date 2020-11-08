@@ -8,8 +8,12 @@ import { AccordianComponent } from './components/accordian/accordian.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
 import { TopOfPageComponent } from './components/top-of-page/top-of-page.component';
-import { AppRoutingModule } from './app-routing.module';
 import { ComponentDocumentationComponent } from './views/component-documentation/component-documentation.component';
+import { ServiceDocumentationComponent } from './views/service-documentation/service-documentation.component';
+import { PipeDocumentationComponent } from './views/pipe-documentation/pipe-documentation.component';
+import { DirectiveDocumentationComponent } from './views/directive-documentation/directive-documentation.component';
+import { RouterModule } from '@angular/router';
+import { APP_ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,13 @@ import { ComponentDocumentationComponent } from './views/component-documentation
     ProgressbarComponent,
     StarRatingComponent,
     TopOfPageComponent,
+    ServiceDocumentationComponent,
     ComponentDocumentationComponent,
+    PipeDocumentationComponent,
+    DirectiveDocumentationComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(APP_ROUTES)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
