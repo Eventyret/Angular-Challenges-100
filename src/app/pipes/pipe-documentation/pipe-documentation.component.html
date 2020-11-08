@@ -1,6 +1,11 @@
 <h1 class="title">Pipes</h1>
 <div class="hr"></div>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Filter Term'" [subtitle]="'Pipes'">
+  <div body>
+    {{['Hello', 'World', 'Hello World'] | filterTerm :'Hello'}}
+  </div>
+</app-card>
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Flatten'" [subtitle]="'Pipes'">
 
   <div body>

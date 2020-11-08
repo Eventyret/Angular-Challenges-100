@@ -7,11 +7,12 @@ import { PIPES_ROUTES} from './pipes.routes';
 import { TruncatePipe } from './truncate/truncate.pipe';
 import { CredircardFormatterPipe } from './creditcard/credircard-formatter.pipe';
 import { FlattenPipe } from './flatten/flatten.pipe';
+import { FilterTermPipe } from './filter/filter-term.pipe';
 
 
 
 @NgModule({
-  declarations: [PipeDocumentationComponent, TruncatePipe,  CredircardFormatterPipe, FlattenPipe],
+  declarations: [PipeDocumentationComponent, TruncatePipe,  CredircardFormatterPipe, FlattenPipe, FilterTermPipe],
   imports: [
     CommonModule,
     SharedModule,
