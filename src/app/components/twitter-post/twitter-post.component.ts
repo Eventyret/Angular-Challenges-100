@@ -18,7 +18,7 @@ export class TwitterPostComponent {
 
   constructor(public titleService: Title) {}
 
-  public get twitterMessage(): string {
+  public get twitterUrl(): string {
     return '';
   }
 }
