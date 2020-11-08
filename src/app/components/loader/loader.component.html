@@ -2,6 +2,7 @@
   <div class="loader-container">
     <div class="loader">
       <ng-container [ngSwitch]="loaderType">
+        <h1 *ngSwitchCase="LoaderType.Loading">Loading</h1>
         <div class="circular" *ngSwitchCase="LoaderType.Circular"></div>
       </ng-container>
     </div>
