@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class LinkedinPostComponent {
   constructor(public router: Router) {}
   public get linkedInMessage(): string {
-    return '';
+    const base = 'https://www.linkedin.com/shareArticle/?mini=true';
+    const currentSite = `&url=https://dehlin.dev${this.router.url}`;
+    return `${base}${currentSite}`;
   }
 }
