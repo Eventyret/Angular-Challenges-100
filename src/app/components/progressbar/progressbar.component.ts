@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-progressbar',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./progressbar.component.scss']
 })
 export class ProgressbarComponent {
-  
+  @Input() public value = 0;
+  @Input() public max =  100;
+
 
 }
