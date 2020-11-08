@@ -1,8 +1,8 @@
-import { Routes} from '@angular/router';
-import { ComponentDocumentationComponent } from './views/component-documentation/component-documentation.component';
-import { DirectiveDocumentationComponent } from './views/directive-documentation/directive-documentation.component';
-import { PipeDocumentationComponent } from './views/pipe-documentation/pipe-documentation.component';
-import { ServiceDocumentationComponent } from './views/service-documentation/service-documentation.component';
+import { Routes } from '@angular/router';
+import { ServiceDocumentationComponent } from './services/service-documentation/service-documentation.component';
+import { ComponentDocumentationComponent } from './components/component-documentation/component-documentation.component';
+import { PipeDocumentationComponent } from './pipes/pipe-documentation/pipe-documentation.component';
+import { DirectiveDocumentationComponent } from './directives/directive-documentation/directive-documentation.component';
 
 export const APP_ROUTES: Routes = [
   { path: '', component: ComponentDocumentationComponent },
