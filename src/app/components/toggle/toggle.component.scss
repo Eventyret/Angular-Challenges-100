@@ -6,4 +6,22 @@
   border-radius: 1.5rem;
   height: 2rem;
   cursor: pointer;
+
+  .toggle-value {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--green);
+    border-radius: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY( -50%);
+    right: 5%;
+    transition: all 0.2s;
+
+    &.isOff {
+      right: 65%;
+      background-color: var(--red);
+    }
+  }
 }
