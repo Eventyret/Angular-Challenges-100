@@ -1,12 +1,35 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'credircardFormatter'
+  name: 'credircardFormatter',
 })
 export class CredircardFormatterPipe implements PipeTransform {
-
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  public transform(cardNumber: string): string {
+    if (!this.hasCorrectLength(cardNumber)) {
+      return 'Invalid Card Length';
+    }
+    if (!this.isAllNumbers(cardNumber)) {
+      return 'Invalid Characters';
+    }
   }
+  private hasCorrectLength(cardNumber: string): boolean {
+    const cardNumberLength = cardNumber.length;
+    const isMasterDiscoverVisaCardLength = 16;
+    const isAmericanExpressCardLength = 15;
 
+    if (
+      cardNumberLength === isAmericanExpressCardLength ||
+      cardNumberLength === isMasterDiscoverVisaCardLength
+    ) {
+      return true;
+    }
+    return false;
+  }
+  private isAllNumbers(cardNumber: string): boolean {
+    const stringNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    const totalValidCharacters = cardNumber
+      .split('')
+      .filter((char) => stringNumbers.includes(char)).length;
+    return totalValidCharacters === cardNumber.length;
+  }
 }
