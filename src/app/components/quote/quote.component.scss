@@ -1,0 +1,9 @@
+blockquote {
+  padding: 2rem;
+  display: grid;
+  color: var(--white);
+  background-color: var(--blue);
+  grid-gap: 1.5rem;
+  grid-template-columns: auto 1fr;
+  border-left: 1rem solid var(--lightBlue);
+}
