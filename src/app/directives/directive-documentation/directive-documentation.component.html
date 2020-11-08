@@ -1,3 +1,7 @@
 <h1 class="title">Directives</h1>
 <div class="hr"></div>
-
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Debounce click'" [subtitle]="'Directives'">
+  <div body>
+    <button appDebounceClick (debounceclick)="log()">Log Output</button>
+  </div>
+</app-card>
