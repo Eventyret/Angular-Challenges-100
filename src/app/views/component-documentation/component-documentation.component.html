@@ -1,1 +1,16 @@
-<p>component-documentation works!</p>
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Star Rating'" [subtitle]="'Components'">
+  <app-star-rating body [rating]="3.6" [maxRating]="5"></app-star-rating>
+</app-card>
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Progressbar'" [subtitle]="'Components'">
+  <app-progressbar body [value]="progressValue"></app-progressbar>
+  <button footer (click)="progressValue = 75;">Update</button>
+</app-card>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Accordian'" [subtitle]="'Components'">
+  <app-accordian body [items]="accoridanItems"></app-accordian>
+</app-card>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Card'" [subtitle]="'Components'">
+  <p footer>Footer Content</p>
+  <p body>Body Content</p>
+</app-card>
