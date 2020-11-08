@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-linkedin-post',
   templateUrl: './linkedin-post.component.html',
   styleUrls: ['./linkedin-post.component.scss']
 })
-export class LinkedinPostComponent implements OnInit {
+export class LinkedinPostComponent  {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
