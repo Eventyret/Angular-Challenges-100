@@ -1,10 +1,12 @@
-
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Input'" [subtitle]="'Components'">
- <app-credit-card-input></app-credit-card-input>
+  <div body>
+    <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadOnly]="false"></app-credit-card-input>
+    <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadOnly]="true"></app-credit-card-input>
+  </div>
 </app-card>
 
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loading'" [subtitle]="'Components'">
- <app-loader body [isLoading]="false"></app-loader>
+  <app-loader body [isLoading]="false"></app-loader>
 </app-card>
 
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Star Rating'" [subtitle]="'Components'">
