@@ -1,12 +1,12 @@
 @import "../../../styles";
 .toolbar-container {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 1rem;
   grid-template-columns: 1fr auto;
   // align-items: center;
-  padding: 10px;
+  padding: 1rem;
   background-color: var(--blue);
-  color: #fff;
+  color: var(--white);
 
   @include box-shadow();
   @media screen and (max-width: $tablet) {
@@ -18,7 +18,7 @@
 :host ::ng-deep {
 ul {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 1rem;
   grid-auto-flow: column;
   li {
     display: inline;
