@@ -10,7 +10,6 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
 import { TopOfPageComponent } from './components/top-of-page/top-of-page.component';
 import { ServiceDocumentationComponent} from './services/service-documentation/service-documentation.component';
 import { ComponentDocumentationComponent } from './components/component-documentation/component-documentation.component';
-import { PipeDocumentationComponent} from './pipes/pipe-documentation/pipe-documentation.component';
 import { DirectiveDocumentationComponent } from './directives/directive-documentation/directive-documentation.component';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
@@ -26,7 +25,6 @@ import { APP_ROUTES } from './app.routes';
     TopOfPageComponent,
     ServiceDocumentationComponent,
     ComponentDocumentationComponent,
-    PipeDocumentationComponent,
     DirectiveDocumentationComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(APP_ROUTES)],
