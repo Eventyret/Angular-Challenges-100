@@ -1,0 +1,29 @@
+@import "../../../styles";
+button {
+  position: fixed;
+  z-index: 2;
+  right: 3%;
+  bottom: 3%;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--red);
+
+  transition: all 0.3;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  @include box-shadow();
+
+  &.is-shown {
+    height: 5rem;
+    width: 5rem;
+    visibility: visible;
+  }
+  i {
+    color: var(--white);
+    font-size: 0;
+    &.is-shown {
+      font-size: 1.5rem;
+    }
+  }
+}
