@@ -7,21 +7,20 @@ import { Component, Input } from '@angular/core';
 })
 export class StarRatingComponent {
   @Input() public rating = 5;
+  @Input() public maxRating = 5;
 
   public get fullStars(): number[] {
     const totalFullStars = Math.floor(this.rating);
     return Array(totalFullStars).fill(0);
   }
   public get hasHalfStar(): boolean {
-    const highestRating = 5;
     const hasHalfStar =
       this.rating - Math.floor(this.rating) > 0.5 &&
-      this.rating !== highestRating;
+      this.rating !== this.maxRating;
     return hasHalfStar;
   }
   public get emptyStars(): number[] {
-    const highestRating = 5;
-    const totalEmptyStars = Math.floor(highestRating - this.rating);
+    const totalEmptyStars = Math.floor(this.maxRating - this.rating);
     return Array(totalEmptyStars).fill(0);
   }
 }
