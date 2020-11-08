@@ -16,6 +16,10 @@
       position: absolute;
       top: 35%;
 
+      h1 {
+        width: 15rem;
+      }
+
       .circular {
         $border-props: 1rem solid;
         border: $border-props var(--lightGrey);
