@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardComponent } from './components/card/card.component';
+import { AccordianComponent } from './components/accordian/accordian.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    CardComponent
+    CardComponent,
+    AccordianComponent
   ],
   imports: [
     BrowserModule
