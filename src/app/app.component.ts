@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AccordianItem } from './models/accordian.models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-challenges';
+  public accoridanItems: AccordianItem[] = [
+    {
+      title: 'Example 1',
+      content: 'Example Content 1',
+      isExpanded: false
+    },
+    {
+      title: 'Example 2',
+      content: 'Example Content 2',
+      isExpanded: false
+    }
+  ]
 }
