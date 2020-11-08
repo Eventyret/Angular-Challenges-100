@@ -7,7 +7,7 @@ import {
   Output,
 } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
-import { debounceTime } from 'rxjs/internal/operators/debounceTime';
+import { debounceTime } from 'rxjs/operators';
 
 @Directive({
   selector: '[appDebounceClick]',
