@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ToggleComponent {
   @Input() public isOn = false;
+
+  public toggle(): void {
+    this.isOn = !this.isOn;
+  }
 }
