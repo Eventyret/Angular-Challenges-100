@@ -1,0 +1,19 @@
+.progressbar-container {
+  display: grid;
+  align-items: center;
+  position: relative;
+  small {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    color: var(--white);
+  }
+
+  progress {
+    width: 100%;
+    height: 1.5rem;
+    background-color: #eee;
+    border-radius: 2rem;
+    transition: all 1s;
+  }
+}
