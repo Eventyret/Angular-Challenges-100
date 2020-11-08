@@ -6,4 +6,23 @@ blockquote {
   grid-gap: 1.5rem;
   grid-template-columns: auto 1fr;
   border-left: 1rem solid var(--lightBlue);
+
+  i {
+    font-size: 3rem;
+  }
+  .quote {
+    margin-right: 25%;
+  }
+  footer {
+    grid-column: 1/3;
+    justify-self: end;
+    text-align: right;
+    .author {
+      font-size: 700;
+      text-transform: uppercase;
+    }
+    .occupation {
+      font-style: italic;
+    }
+  }
 }
