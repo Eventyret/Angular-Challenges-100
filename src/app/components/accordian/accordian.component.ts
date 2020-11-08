@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { AccordianItem} from '../../models/accordian.models';
+import { AccordianItem } from '../../models/accordian.models';
 
 @Component({
   selector: 'app-accordian',
@@ -8,4 +8,8 @@ import { AccordianItem} from '../../models/accordian.models';
 })
 export class AccordianComponent {
   @Input() public items: AccordianItem[] = [];
+
+  public toggle(item: AccordianItem): void {
+    item.isExpanded = !item.isExpanded;
+  }
 }

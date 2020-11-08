@@ -1,0 +1,22 @@
+@import "../../../styles";
+
+.accordian-container {
+  @include box-shadow();
+  .item {
+    border-bottom: 1px solid rgba(211, 211, 211);
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      padding: 1rem 2rem;
+      i {
+        color: var(--blue);
+        transition: all 0.3s;
+
+        &.is-expanded {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+}
