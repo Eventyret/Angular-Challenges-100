@@ -8,7 +8,7 @@
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
-      padding: 1rem 2rem;
+      padding: var(--padding);
       i {
         color: var(--blue);
         transition: all 0.3s;
@@ -17,6 +17,13 @@
           transform: rotate(-180deg);
         }
       }
+    }
+    .content {
+      padding: var(--padding);
+      display: none;
+        &.is-expanded {
+          display: block;
+        }
     }
   }
 }

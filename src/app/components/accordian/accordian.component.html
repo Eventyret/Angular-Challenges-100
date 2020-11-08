@@ -4,7 +4,7 @@
       <h4>{{item.title }}</h4>
       <i class="fas fa-chevron-down" [class.is-expanded]="item.isExpanded" (click)="toggle(item)"></i>
     </div>
-    <div class="content">
+    <div class="content" [class.is-expanded]="item.isExpanded" >
       <p>{{item.content}}</p>
     </div>
   </div>
