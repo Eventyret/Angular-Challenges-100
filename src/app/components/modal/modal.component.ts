@@ -7,5 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class ModalComponent {
   @Input() public title = '';
-  public isHidden = false;
+  public isHidden = true;
+
+  public close(): void {
+    this.isHidden = true;
+  }
+  public open(): void {
+    this.isHidden = false;
+  }
 }

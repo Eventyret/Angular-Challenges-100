@@ -1,7 +1,7 @@
 <div class="modal-container" [class.isHidden]=isHidden>
   <div class="modal-header">
     <h5>{{title}}</h5>
-    <i class="fas fa-times"></i>
+    <i class="fas fa-times" (click)="close()"></i>
   </div>
   <div class="modal-body">
     <ng-content></ng-content>

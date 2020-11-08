@@ -2,10 +2,12 @@
 <div class="hr"></div>
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Modal'" [subtitle]="'Components'">
   <div body>
-    <app-modal [title]="'Modal Example'">
+    <app-modal [title]="'Modal Example'" #modal>
       <p>Some Content</p>
     </app-modal>
-    <div footer></div>
+    <div footer>
+      <button (click)="modal.open()">Open Modal</button>
+    </div>
   </div>
 </app-card>
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'LinkedIn Post'" [subtitle]="'Components'">
