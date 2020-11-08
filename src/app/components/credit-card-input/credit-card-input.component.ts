@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-credit-card-input',
   templateUrl: './credit-card-input.component.html',
-  styleUrls: ['./credit-card-input.component.scss']
+  styleUrls: ['./credit-card-input.component.scss'],
 })
-export class CreditCardInputComponent implements OnInit {
+export class CreditCardInputComponent {
+  private readOnly = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  @Input() public creditCardNumber = '';
+  @Input() public set isReadOnly(value: boolean) {
+    this.readOnly = value;
   }
-
+  public get isReadOnly(): boolean {
+    return this.readOnly;
+  }
 }
