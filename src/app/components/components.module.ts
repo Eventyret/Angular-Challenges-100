@@ -8,6 +8,7 @@ import { AccordianComponent } from './accordian/accordian.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { SharedModule } from '../shared/shared.module';
+import { CreditCardInputComponent } from './credit-card-input/credit-card-input.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     AccordianComponent,
     ProgressbarComponent,
     StarRatingComponent,
+    CreditCardInputComponent,
   ],
   imports: [
     CommonModule,
